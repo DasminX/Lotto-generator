@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 :root {
+  --background-gradient: linear-gradient(
+    180deg,
+    rgba(110, 169, 245, 1) 0%,
+    rgba(110, 169, 245, 0.5) 95%,
+    rgba(255, 255, 255, 0.438) 100%
+  );
   --disabled-color: #999;
 }
 
@@ -11,8 +17,8 @@
 }
 
 body {
-  background-color: #6ea9f5;
-  font-family: 'Oswald', sans-serif;
+  background: var(--background-gradient);
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
 }
 
@@ -63,6 +69,13 @@ i {
 .site-container {
   min-height: 100vh;
   width: 100%;
+}
+
+.gif {
+  position: absolute;
+  right: 0%;
+  top: 8%;
+  width: 25%;
 }
 
 .winning-h1 {
@@ -117,7 +130,7 @@ i {
 }
 
 .navbar__lotto img {
-  max-width: 125px;
+  max-width: 200px;
   z-index: 3;
 }
 
@@ -126,7 +139,7 @@ i {
 }
 
 .navbar__lotto.active img {
-  max-width: 200px;
+  max-width: 350px;
 }
 
 .navbar__lotto.active + .loading-container {
@@ -147,14 +160,14 @@ i {
   border-radius: 10px;
   font-size: 1.25em;
   font-weight: 600;
-  height: 40px;
+  height: 60px;
   left: 50%;
   letter-spacing: 2px;
   position: absolute;
-  top: 30%;
+  top: 35%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 130px;
+  width: 200px;
 }
 
 .button:hover {
@@ -173,7 +186,7 @@ i {
 }
 
 .button.new-cupon {
-  top: 45%;
+  top: 50%;
 }
 
 .fields-container {
@@ -181,7 +194,7 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 35vh;
+  height: 30vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   left: 0;
@@ -214,7 +227,7 @@ i {
 
 .fields-container .numbers-to-choose::before {
   color: white;
-  content: 'Wybierz liczby!';
+  content: "Wybierz liczby!";
   display: block;
   position: absolute;
   top: -15%;
@@ -225,16 +238,17 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 21%;
+  height: 12vh;
+  width: 15%;
 }
 
 .fields-container .random-lotto-numbers::before {
   color: white;
-  content: 'Wylosowane liczby:';
+  content: "Wylosowane liczby:";
   display: block;
   overflow: hidden;
   position: absolute;
-  top: -15%;
+  top: -32%;
   left: 5%;
 }
 
@@ -244,5 +258,73 @@ i {
 
 .fields-container .levels-container * {
   margin-bottom: 5%;
+}
+
+@media (max-width: 1366px) {
+  .navbar__lotto img {
+    max-width: 150px;
+  }
+  .navbar__lotto.active img {
+    max-width: 225px;
+  }
+  .button {
+    height: 45px;
+    width: 150px;
+  }
+  .fields-container {
+    bottom: 15%;
+    height: 25vh;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 14vh;
+    margin-top: 5%;
+    width: 26%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -34%;
+  }
+  .fields-container .levels-container {
+    width: 20%;
+  }
+  .fields-container .levels-container * {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .button.new-cupon {
+    top: 45%;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 14vh;
+    margin-top: 5%;
+    width: 13%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar__lotto img {
+    max-width: 125px;
+  }
+  .navbar__lotto.active img {
+    max-width: 175px;
+  }
+  .button {
+    top: 30%;
+  }
+  .button.new-cupon {
+    top: 43%;
+  }
+  .fields-container {
+    bottom: 27%;
+    height: 15vh;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 14vh;
+    width: 28%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -39%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
