@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 :root {
+  --blue-color: rgba(110, 169, 245, 1);
   --background-gradient: linear-gradient(
     180deg,
     rgba(110, 169, 245, 1) 0%,
@@ -17,7 +18,6 @@
 }
 
 body {
-  background: var(--background-gradient);
   font-family: "Oswald", sans-serif;
   font-size: 16px;
 }
@@ -67,6 +67,7 @@ i {
 
 /* Styling components */
 .site-container {
+  background: var(--background-gradient);
   min-height: 100vh;
   width: 100%;
 }
@@ -231,7 +232,7 @@ i {
   display: block;
   position: absolute;
   top: -15%;
-  left: 5%;
+  left: 2.5%;
 }
 
 .fields-container .random-lotto-numbers {
@@ -260,7 +261,10 @@ i {
   margin-bottom: 5%;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1366px) and (orientation: landscape) {
+  .social-media-container i {
+    margin-left: 20px;
+  }
   .navbar__lotto img {
     max-width: 150px;
   }
@@ -268,20 +272,18 @@ i {
     max-width: 225px;
   }
   .button {
-    height: 45px;
-    width: 150px;
+    top: 30%;
   }
-  .fields-container {
-    bottom: 15%;
-    height: 25vh;
+  .button.new-cupon {
+    top: 45%;
   }
   .fields-container .random-lotto-numbers {
     height: 14vh;
     margin-top: 5%;
-    width: 26%;
+    width: 13%;
   }
   .fields-container .random-lotto-numbers::before {
-    top: -34%;
+    top: -29%;
   }
   .fields-container .levels-container {
     width: 20%;
@@ -291,18 +293,17 @@ i {
   }
 }
 
-@media (max-width: 1280px) {
-  .button.new-cupon {
-    top: 45%;
+@media (max-width: 1024px) and (orientation: landscape) {
+  .winning-h1 {
+    left: 50%;
   }
-  .fields-container .random-lotto-numbers {
-    height: 14vh;
-    margin-top: 5%;
-    width: 13%;
+  .winning-h1.active {
+    -webkit-transform: scale(0.8) translateX(-60%);
+            transform: scale(0.8) translateX(-60%);
   }
-}
-
-@media (max-width: 1024px) {
+  .social-media-container a:nth-of-type(1) {
+    margin-left: 40px;
+  }
   .navbar__lotto img {
     max-width: 125px;
   }
@@ -310,21 +311,212 @@ i {
     max-width: 175px;
   }
   .button {
-    top: 30%;
-  }
-  .button.new-cupon {
-    top: 43%;
+    height: 50px;
+    top: 32%;
+    width: 165px;
   }
   .fields-container {
-    bottom: 27%;
-    height: 15vh;
+    bottom: 15%;
   }
   .fields-container .random-lotto-numbers {
-    height: 14vh;
+    height: 19vh;
     width: 28%;
   }
   .fields-container .random-lotto-numbers::before {
-    top: -39%;
+    top: -46%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 915px) {
+  .winning-h1 {
+    left: 5%;
+  }
+  .winning-h1.active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .navbar__lotto img {
+    max-width: 100px;
+  }
+  .navbar__lotto.active img {
+    max-width: 150px;
+  }
+  .button {
+    height: 40px;
+    top: 32%;
+    width: 145px;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 28vh;
+    width: 30%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -34%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 740px) {
+  .navbar__lotto img {
+    max-width: 85px;
+  }
+  .navbar__lotto.active img {
+    max-width: 115px;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 24vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 653px) {
+  .winning-h1.active {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .navbar__lotto img {
+    max-width: 65px;
+  }
+  .navbar__lotto.active img {
+    max-width: 100px;
+  }
+  .button {
+    height: 30px;
+    width: 115px;
+  }
+  .fields-container .numbers-to-choose {
+    max-width: 100%;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 30vh;
+    width: 30%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -32%;
+  }
+  .fields-container .levels-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 912px) and (orientation: portrait) {
+  .winning-h1 {
+    left: 50%;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .winning-h1.active {
+    -webkit-transform: scale(1.2) translateX(-48%);
+            transform: scale(1.2) translateX(-48%);
+  }
+  .social-media-container a:nth-of-type(1) {
+    margin-left: 40px;
+  }
+  .social-media-container i {
+    margin-left: 20px;
+  }
+  .button {
+    height: 80px;
+  }
+  .button.new-cupon {
+    top: 45%;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .winning-h1.active {
+    -webkit-transform: scale(1) translateX(-48%);
+            transform: scale(1) translateX(-48%);
+  }
+  .navbar__lotto img {
+    max-width: 165px;
+  }
+  .navbar__lotto.active img {
+    max-width: 200px;
+  }
+  .button {
+    height: 60px;
+  }
+}
+
+.fields-container .random-lotto-numbers::before {
+  top: -48%;
+}
+
+@media (max-width: 540px) and (orientation: portrait) {
+  .winning-h1 {
+    left: -5%;
+  }
+  .winning-h1.active {
+    -webkit-transform: scale(0.52);
+            transform: scale(0.52);
+  }
+  .social-media-container a:nth-of-type(1) {
+    margin-left: 60px;
+  }
+  .navbar__lotto.active {
+    top: 7%;
+  }
+  .button {
+    height: 35px;
+    top: 30%;
+    width: 145px;
+  }
+  .button.new-cupon {
+    top: 38%;
+  }
+  .fields-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 5%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 50vh;
+  }
+  .fields-container .numbers-to-choose {
+    max-width: 100%;
+  }
+  .fields-container .numbers-to-choose::before {
+    top: -20%;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 18vh;
+    width: 28%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -29%;
+  }
+  .fields-container .levels-container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 393px) and (orientation: portrait) {
+  .winning-h1 {
+    left: -13%;
+    top: 15%;
+  }
+  .social-media-container a:nth-of-type(1) {
+    margin-left: 50px;
+  }
+  .navbar__lotto img {
+    max-width: 105px;
+  }
+  .navbar__lotto.active {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+    top: 10%;
+  }
+  .navbar__lotto.active img {
+    max-width: 140px;
+  }
+  .fields-container .numbers-to-choose::before {
+    top: -15%;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 33vh;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -23%;
   }
 }
 /*# sourceMappingURL=style.css.map */
