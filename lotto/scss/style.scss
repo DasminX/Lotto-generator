@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 :root {
-  --blue-color: rgba(110, 169, 245, 1);
   --background-gradient: linear-gradient(
     180deg,
     rgba(110, 169, 245, 1) 0%,
     rgba(110, 169, 245, 0.5) 95%,
     rgba(255, 255, 255, 0.438) 100%
   );
+  --blue-color: rgba(110, 169, 245, 1);
   --disabled-color: #999;
 }
 
@@ -18,11 +18,13 @@
 }
 
 body {
+  background: var(--background-gradient);
   font-family: "Oswald", sans-serif;
   font-size: 16px;
 }
 
-// Specific classes
+//////////////////////////////////////////////////////
+/*  Specific classes */
 .button:hover,
 span.lotto__number--circle,
 i {
@@ -53,26 +55,27 @@ i {
   }
 }
 
+// Setting flex on fields
 .flex-numbers {
   display: flex;
   flex-wrap: wrap;
 }
 
 /* Styling components */
-
 .site-container {
-  background: var(--background-gradient);
   min-height: 100vh;
   width: 100%;
 }
 
+// Butterflies on right side
 .gif {
   position: absolute;
   right: 0%;
   top: 8%;
   width: 25%;
 }
-// Displaying about a score
+
+// Displaying a score
 .winning-h1 {
   color: rgb(217, 231, 13);
   left: 10%;
@@ -145,7 +148,6 @@ i {
 }
 
 // Styling buttons
-
 .button {
   background-color: white;
   border: 2px solid black;
@@ -181,7 +183,6 @@ i {
 }
 
 // Styling fields container
-
 .fields-container {
   bottom: 5%;
   display: flex;
@@ -207,7 +208,6 @@ i {
   }
 
   // Numbers to choose
-
   .numbers-to-choose {
     max-width: 41%;
 
@@ -215,14 +215,13 @@ i {
       color: white;
       content: "Wybierz liczby!";
       display: block;
+      left: 2.5%;
       position: absolute;
       top: -15%;
-      left: 2.5%;
     }
   }
 
   // Random lotto numbers picker
-
   .random-lotto-numbers {
     display: flex;
     height: 12vh;
@@ -232,15 +231,14 @@ i {
       color: white;
       content: "Wylosowane liczby:";
       display: block;
+      left: 5%;
       overflow: hidden;
       position: absolute;
       top: -32%;
-      left: 5%;
     }
   }
 
   // Levels description
-
   .levels-container {
     width: 20%;
 
@@ -250,8 +248,8 @@ i {
   }
 }
 
-// Styling for width-max 1366px
-@media (max-width: 1366px) and (orientation: landscape) {
+/*  MEDIA QUERIES for MAX-WIDTH 1366PX and LANDSCAPE ORIENTATION */
+@media (orientation: landscape) and (max-width: 1366px) {
   .social-media-container {
     i {
       margin-left: 20px;
@@ -260,12 +258,12 @@ i {
 
   .navbar__lotto {
     img {
-      max-width: 150px;
+      transform: scale(0.75);
     }
 
     &.active {
       img {
-        max-width: 225px;
+        transform: scale(0.75);
       }
     }
   }
@@ -277,9 +275,7 @@ i {
     }
   }
 
-  // Styling fields container for width-max 1366px
   .fields-container {
-    // Random lotto numbers picker for width-max 1366px
     .random-lotto-numbers {
       height: 14vh;
       margin-top: 5%;
@@ -288,25 +284,14 @@ i {
         top: -29%;
       }
     }
-
-    // Levels description for width-max 1366px
-
-    .levels-container {
-      width: 20%;
-
-      & * {
-        margin-bottom: 5%;
-      }
-    }
   }
 }
 
-// Styling for max-width for 1024px
-@media (max-width: 1024px) and (orientation: landscape) {
+/*  MEDIA QUERIES for MAX-WIDTH 1024PX and LANDSCAPE ORIENTATION */
+@media (orientation: landscape) and (max-width: 1024px) {
   .winning-h1 {
-    left: 50%;
     &.active {
-      transform: scale(0.8) translateX(-60%);
+      transform: scale(0.8);
     }
   }
 
@@ -318,39 +303,42 @@ i {
 
   .navbar__lotto {
     img {
-      max-width: 125px;
+      transform: scale(0.6);
     }
 
     &.active {
       img {
-        max-width: 175px;
+        transform: scale(0.6);
       }
     }
   }
 
   .button {
     height: 50px;
-    top: 32%;
+    top: 35%;
     width: 165px;
   }
 
   .fields-container {
     bottom: 15%;
 
-    // Random lotto numbers picker for width-max 1024px
     .random-lotto-numbers {
       height: 19vh;
       width: 28%;
 
       &::before {
-        top: -46%;
+        top: -23%;
       }
     }
   }
 }
-//
-// Styling for max-width for 915px
+
+/*  MEDIA QUERIES for MAX-WIDTH 915PX and LANDSCAPE ORIENTATION */
 @media (orientation: landscape) and (max-width: 915px) {
+  body {
+    background: var(--blue-color);
+  }
+
   .winning-h1 {
     left: 5%;
     &.active {
@@ -377,7 +365,6 @@ i {
   }
 
   .fields-container {
-    // Random lotto numbers picker for width-max 915px
     .random-lotto-numbers {
       height: 28vh;
       width: 30%;
@@ -388,15 +375,16 @@ i {
   }
 }
 
+/*  MEDIA QUERIES for MAX-WIDTH 740PX and LANDSCAPE ORIENTATION */
 @media (orientation: landscape) and (max-width: 740px) {
   .navbar__lotto {
     img {
-      max-width: 85px;
+      transform: scale(0.8);
     }
 
     &.active {
       img {
-        max-width: 115px;
+        transform: scale(0.8);
       }
     }
   }
@@ -408,6 +396,7 @@ i {
   }
 }
 
+/*  MEDIA QUERIES for MAX-WIDTH 653px and LANDSCAPE ORIENTATION */
 @media (orientation: landscape) and (max-width: 653px) {
   .winning-h1 {
     &.active {
@@ -417,12 +406,12 @@ i {
 
   .navbar__lotto {
     img {
-      max-width: 65px;
+      max-width: 75px;
     }
 
     &.active {
       img {
-        max-width: 100px;
+        max-width: 115px;
       }
     }
   }
@@ -432,26 +421,15 @@ i {
     width: 115px;
   }
 
-  // Styling fields container
-
   .fields-container {
-    // Numbers to choose
     .numbers-to-choose {
       max-width: 100%;
     }
 
-    // Random lotto numbers picker
-
     .random-lotto-numbers {
       height: 30vh;
       width: 30%;
-
-      &::before {
-        top: -32%;
-      }
     }
-
-    // Levels description
 
     .levels-container {
       width: 45%;
@@ -459,17 +437,17 @@ i {
   }
 }
 
-@media (max-width: 912px) and (orientation: portrait) {
+/*  MEDIA QUERIES for MAX-WIDTH 912PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 912px) {
   .winning-h1 {
     left: 50%;
     transform: scale(0);
 
     &.active {
-      transform: scale(1.2) translateX(-48%);
+      transform: scale(1.2) translateX(-45%);
     }
   }
 
-  // Social media
   .social-media-container {
     a:nth-of-type(1) {
       margin-left: 40px;
@@ -480,8 +458,6 @@ i {
     }
   }
 
-  // Styling buttons
-
   .button {
     height: 80px;
 
@@ -490,10 +466,26 @@ i {
     }
   }
 }
-@media (max-width: 768px) and (orientation: portrait) {
+
+.fields-container {
+  .numbers-to-choose {
+    &::before {
+      top: -8%;
+    }
+  }
+
+  .random-lotto-numbers {
+    &::before {
+      top: -19%;
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 768PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 768px) {
   .winning-h1 {
     &.active {
-      transform: scale(1) translateX(-48%);
+      transform: scale(1) translateX(-45%);
     }
   }
 
@@ -509,22 +501,31 @@ i {
     }
   }
 
-  // Styling buttons
-
   .button {
     height: 60px;
   }
 }
 
 .fields-container {
+  .numbers-to-choose {
+    &::before {
+      top: -11%;
+    }
+  }
+
   .random-lotto-numbers {
     &::before {
-      top: -48%;
+      top: -43%;
     }
   }
 }
 
-@media (max-width: 540px) and (orientation: portrait) {
+/*  MEDIA QUERIES for MAX-WIDTH 540PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 540px) {
+  body {
+    background: var(--blue-color);
+  }
+
   .winning-h1 {
     left: -5%;
     &.active {
@@ -532,21 +533,17 @@ i {
     }
   }
 
-  // Social media for width-max 540px
   .social-media-container {
     a:nth-of-type(1) {
       margin-left: 60px;
     }
   }
 
-  // Navbar for width-max 540px
   .navbar__lotto {
     &.active {
       top: 7%;
     }
   }
-
-  // Styling buttons for width-max 540px
 
   .button {
     height: 35px;
@@ -558,15 +555,11 @@ i {
     }
   }
 
-  // Styling fields container for width-max 540px
-
   .fields-container {
     align-items: center;
     bottom: 5%;
     flex-wrap: wrap;
     height: 50vh;
-
-    // Numbers to choose for width-max 540px
 
     .numbers-to-choose {
       max-width: 100%;
@@ -575,8 +568,6 @@ i {
         top: -20%;
       }
     }
-
-    // Random lotto numbers picker for width-max 540px
 
     .random-lotto-numbers {
       height: 18vh;
@@ -587,21 +578,40 @@ i {
       }
     }
 
-    // Levels description for width-max 540px
-
     .levels-container {
       width: 40%;
     }
   }
 }
 
-@media (max-width: 393px) and (orientation: portrait) {
+/*  MEDIA QUERIES for MAX-WIDTH 414PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 414px) {
   .winning-h1 {
-    left: -13%;
+    top: 23%;
+  }
+
+  .fields-container {
+    .numbers-to-choose {
+      &::before {
+        top: -15%;
+      }
+    }
+
+    .random-lotto-numbers {
+      &::before {
+        top: -37%;
+      }
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 393PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 393px) {
+  .winning-h1 {
+    left: -11%;
     top: 15%;
   }
 
-  // Social media for width-max 375px
   .social-media-container {
     a:nth-of-type(1) {
       margin-left: 50px;
@@ -622,17 +632,62 @@ i {
     }
   }
 
+  .button {
+    top: 25%;
+
+    &.new-cupon {
+      top: 33%;
+    }
+  }
+
   .fields-container {
+    height: 55vh;
     .numbers-to-choose {
       &::before {
-        top: -15%;
+        top: -11%;
       }
     }
 
-    // Random lotto numbers picker for width-max 375px
-
     .random-lotto-numbers {
-      height: 33vh;
+      height: 29vh;
+
+      &::before {
+        top: -21%;
+      }
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 375PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 375px) {
+  .made-by {
+    right: -3%;
+    transform: scale(0.62);
+  }
+
+  .social-media-container {
+    a:nth-of-type(1) {
+      margin-left: 60px;
+    }
+  }
+
+  .navbar__lotto {
+    &.active {
+      top: 7%;
+    }
+  }
+
+  .button {
+    top: 23%;
+
+    &.new-cupon {
+      top: 31%;
+    }
+  }
+
+  .fields-container {
+    .random-lotto-numbers {
+      height: 34vh;
 
       &::before {
         top: -23%;
@@ -641,4 +696,61 @@ i {
   }
 }
 
-// 240 PX PORTRAIT TO DO AND CLEANING
+/*  MEDIA QUERIES for MAX-WIDTH 360PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 360px) {
+  .fields-container {
+    .random-lotto-numbers {
+      &::before {
+        top: -21%;
+      }
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 280PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 280px) {
+  .winning-h1 {
+    left: -16%;
+    top: 13%;
+  }
+
+  .made-by {
+    right: -10%;
+  }
+
+  .button {
+    top: 22%;
+
+    &.new-cupon {
+      top: 31%;
+    }
+  }
+
+  .navbar__lotto {
+    img {
+      max-width: 75px;
+    }
+
+    &.active {
+      top: 9%;
+      transform: translateX(9%);
+      img {
+        max-width: 115px;
+      }
+    }
+  }
+
+  .fields-container {
+    .numbers-to-choose {
+      &::before {
+        top: -8%;
+      }
+    }
+
+    .random-lotto-numbers {
+      &::before {
+        top: -24%;
+      }
+    }
+  }
+}
