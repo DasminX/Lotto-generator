@@ -467,6 +467,20 @@ i {
   }
 }
 
+.fields-container {
+  .numbers-to-choose {
+    &::before {
+      top: -8%;
+    }
+  }
+
+  .random-lotto-numbers {
+    &::before {
+      top: -19%;
+    }
+  }
+}
+
 /*  MEDIA QUERIES for MAX-WIDTH 768PX and PORTRAIT ORIENTATION */
 @media (orientation: portrait) and (max-width: 768px) {
   .winning-h1 {
@@ -489,6 +503,20 @@ i {
 
   .button {
     height: 60px;
+  }
+}
+
+.fields-container {
+  .numbers-to-choose {
+    &::before {
+      top: -11%;
+    }
+  }
+
+  .random-lotto-numbers {
+    &::before {
+      top: -43%;
+    }
   }
 }
 
@@ -556,10 +584,31 @@ i {
   }
 }
 
+/*  MEDIA QUERIES for MAX-WIDTH 414PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 414px) {
+  .winning-h1 {
+    top: 23%;
+  }
+
+  .fields-container {
+    .numbers-to-choose {
+      &::before {
+        top: -15%;
+      }
+    }
+
+    .random-lotto-numbers {
+      &::before {
+        top: -37%;
+      }
+    }
+  }
+}
+
 /*  MEDIA QUERIES for MAX-WIDTH 393PX and PORTRAIT ORIENTATION */
 @media (orientation: portrait) and (max-width: 393px) {
   .winning-h1 {
-    left: -13%;
+    left: -11%;
     top: 15%;
   }
 
@@ -583,16 +632,74 @@ i {
     }
   }
 
+  .button {
+    top: 25%;
+
+    &.new-cupon {
+      top: 33%;
+    }
+  }
+
   .fields-container {
+    height: 55vh;
     .numbers-to-choose {
       &::before {
-        top: -15%;
+        top: -11%;
       }
     }
 
     .random-lotto-numbers {
-      height: 31vh;
+      height: 29vh;
 
+      &::before {
+        top: -21%;
+      }
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 375PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 375px) {
+  .made-by {
+    right: -3%;
+    transform: scale(0.62);
+  }
+
+  .social-media-container {
+    a:nth-of-type(1) {
+      margin-left: 60px;
+    }
+  }
+
+  .navbar__lotto {
+    &.active {
+      top: 7%;
+    }
+  }
+
+  .button {
+    top: 23%;
+
+    &.new-cupon {
+      top: 31%;
+    }
+  }
+
+  .fields-container {
+    .random-lotto-numbers {
+      height: 34vh;
+
+      &::before {
+        top: -23%;
+      }
+    }
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 360PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 360px) {
+  .fields-container {
+    .random-lotto-numbers {
       &::before {
         top: -21%;
       }
@@ -604,19 +711,18 @@ i {
 @media (orientation: portrait) and (max-width: 280px) {
   .winning-h1 {
     left: -16%;
-    top: 19%;
+    top: 13%;
   }
 
   .made-by {
     right: -10%;
-    transform: scale(0.62);
   }
 
   .button {
-    top: 27%;
+    top: 22%;
 
     &.new-cupon {
-      top: 36%;
+      top: 31%;
     }
   }
 
@@ -626,6 +732,8 @@ i {
     }
 
     &.active {
+      top: 9%;
+      transform: translateX(9%);
       img {
         max-width: 115px;
       }

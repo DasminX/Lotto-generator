@@ -425,6 +425,14 @@ i {
   }
 }
 
+.fields-container .numbers-to-choose::before {
+  top: -8%;
+}
+
+.fields-container .random-lotto-numbers::before {
+  top: -19%;
+}
+
 /*  MEDIA QUERIES for MAX-WIDTH 768PX and PORTRAIT ORIENTATION */
 @media (orientation: portrait) and (max-width: 768px) {
   .winning-h1.active {
@@ -440,6 +448,14 @@ i {
   .button {
     height: 60px;
   }
+}
+
+.fields-container .numbers-to-choose::before {
+  top: -11%;
+}
+
+.fields-container .random-lotto-numbers::before {
+  top: -43%;
 }
 
 /*  MEDIA QUERIES for MAX-WIDTH 540PX and PORTRAIT ORIENTATION */
@@ -495,10 +511,23 @@ i {
   }
 }
 
+/*  MEDIA QUERIES for MAX-WIDTH 414PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 414px) {
+  .winning-h1 {
+    top: 23%;
+  }
+  .fields-container .numbers-to-choose::before {
+    top: -15%;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -37%;
+  }
+}
+
 /*  MEDIA QUERIES for MAX-WIDTH 393PX and PORTRAIT ORIENTATION */
 @media (orientation: portrait) and (max-width: 393px) {
   .winning-h1 {
-    left: -13%;
+    left: -11%;
     top: 15%;
   }
   .social-media-container a:nth-of-type(1) {
@@ -515,12 +544,55 @@ i {
   .navbar__lotto.active img {
     max-width: 140px;
   }
+  .button {
+    top: 25%;
+  }
+  .button.new-cupon {
+    top: 33%;
+  }
+  .fields-container {
+    height: 55vh;
+  }
   .fields-container .numbers-to-choose::before {
-    top: -15%;
+    top: -11%;
   }
   .fields-container .random-lotto-numbers {
-    height: 31vh;
+    height: 29vh;
   }
+  .fields-container .random-lotto-numbers::before {
+    top: -21%;
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 375PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 375px) {
+  .made-by {
+    right: -3%;
+    -webkit-transform: scale(0.62);
+            transform: scale(0.62);
+  }
+  .social-media-container a:nth-of-type(1) {
+    margin-left: 60px;
+  }
+  .navbar__lotto.active {
+    top: 7%;
+  }
+  .button {
+    top: 23%;
+  }
+  .button.new-cupon {
+    top: 31%;
+  }
+  .fields-container .random-lotto-numbers {
+    height: 34vh;
+  }
+  .fields-container .random-lotto-numbers::before {
+    top: -23%;
+  }
+}
+
+/*  MEDIA QUERIES for MAX-WIDTH 360PX and PORTRAIT ORIENTATION */
+@media (orientation: portrait) and (max-width: 360px) {
   .fields-container .random-lotto-numbers::before {
     top: -21%;
   }
@@ -530,21 +602,24 @@ i {
 @media (orientation: portrait) and (max-width: 280px) {
   .winning-h1 {
     left: -16%;
-    top: 19%;
+    top: 13%;
   }
   .made-by {
     right: -10%;
-    -webkit-transform: scale(0.62);
-            transform: scale(0.62);
   }
   .button {
-    top: 27%;
+    top: 22%;
   }
   .button.new-cupon {
-    top: 36%;
+    top: 31%;
   }
   .navbar__lotto img {
     max-width: 75px;
+  }
+  .navbar__lotto.active {
+    top: 9%;
+    -webkit-transform: translateX(9%);
+            transform: translateX(9%);
   }
   .navbar__lotto.active img {
     max-width: 115px;
