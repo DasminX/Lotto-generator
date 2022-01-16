@@ -8,5 +8,3 @@ Later on, 'system' is generating six random numbers, and according to the compar
 
 This project was initially intended to be a 'demo' aplication for desktop, but when I found your internship offer, I decided to make it responsive and 'cool' (I hope so it is).
 Because of the fact that I'm a student and I have a full-time job, I had not enough time to make it in a proper way (mobile first) and there is, probably, a lot of things to fix, but I really spent my whole spare time to make it look good.
-
-On the next upload, I'll make it look better on mobiles.
